@@ -17,3 +17,18 @@
      - syntax: {% tag %}
      - description: controls logic with loops, conditions etc.
      eg: {% if user.is_authentictated %} 
+
+# Django Variable and Tags
+
+### Templates variable 
+ - They are special variables used by the views.py file to render dynamic data to the template html page.
+ - Basically placeholder for data passed from views
+ - They are written in double culry braces {{}}. When html pages are rendered they replaces it with actual values from view.
+   - eg : {{ user.username }}
+
+### Template tags
+ - Tags help to add logic or structures - loops, conditions, includes
+ - written with {%...%}
+   - eg: {% for item in items%}
+            ....
+         {% endfor %}   

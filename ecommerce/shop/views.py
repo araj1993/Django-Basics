@@ -12,3 +12,11 @@ def profile(request):
 
 def payment(request):
     return render(request, 'payment.html')
+
+def demo(request):
+    context={
+        'name':'Mobile Phone',
+        'category': 'Electronics',
+        'stock': 100
+    }
+    return render(request, 'var_and_tags.html', context)
