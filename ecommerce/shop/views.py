@@ -19,4 +19,10 @@ def demo(request):
         'category': 'Electronics',
         'stock': 100
     }
-    return render(request, 'var_and_tags.html', context)
+    context_tags = {
+        'num': 10,
+    }
+    ele_items = {
+        'electronics': ['Laptop', 'Mobile', 'Tablet', 'Camera'],
+    }
+    return render(request, 'var_and_tags.html', {**context, **context_tags, **ele_items})

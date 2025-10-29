@@ -5,8 +5,29 @@
         <title>Template Variables and Tags</title>
     </head>
     <body>
-        <h2> Name of Product is {{ name }} </h2>
-        <h2> Category of Product is {{ category }} </h2>
-        <h2> Stock of Product is {{ stock }} </h2>
+        <div>
+            <h2 style="color: blue;">Demonstration of Template Variables and Tags in Django </h2>
+            <h2> Name of Product is {{ name }} </h2>
+            <h2> Category of Product is {{ category }} </h2>
+            <h2> Stock of Product is {{ stock }} </h2>
+        </div>
+        <br>
+        <div>
+            <h2 style="color: blue;">Demonstration of Template Tags in Django </h2>
+            {% if num > 0 %}
+                <h3> The Number is positive. </h3>
+            {% else %}
+                <h3> The Number is zero or negative. </h3>
+            {% endif %}
+        </div>
+        <br>
+        <div >
+            <h2 style="color: blue;">Demonstration of For Loop in Django Template Tags </h2>
+            <h3> List of Products: </h3>
+            <ul>
+                {% for ele in electronics %}
+                    <li>{{ ele }}</li>
+                {% endfor %}
+            </ul>
     </body>
 </html>
