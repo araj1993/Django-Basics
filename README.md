@@ -32,3 +32,9 @@
    - eg: {% for item in items%}
             ....
          {% endfor %}   
+
+# Django Template Inheritance
+ 
+ - commonly used templates (footer, header, navbar) can be kept as a base template and inherited to child templates, using {% extends %} tag.
+ - inside the base template the {% block title %} and {% block content %} tags define replaceable sections in child template.
+ - {% extends "base.html" %} tells Django this template is a child of base.html
