@@ -36,5 +36,11 @@
 # Django Template Inheritance
  
  - commonly used templates (footer, header, navbar) can be kept as a base template and inherited to child templates, using {% extends %} tag.
- - inside the base template the {% block title %} and {% block content %} tags define replaceable sections in child template.
+ - inside the base template the {% block title %} and {% block content %} tags define replaceable sections in child template. 
+ - Each section defined inside {% block <name> %} will replace the name tag from child templates
  - {% extends "base.html" %} tells Django this template is a child of base.html
+
+ ### To include logo images, CSS, JavaScript saved inside the /static/ folder inside the base.html file, it can be done in 2 ways:
+  1. To inherite logo images, css used in base template to children, then children template should start with {% load static %} 
+  2. Create separate html file for each section(eg: header.html, navbar.html, footer.html) inside the /template/ folder and cut&paste each section from base.html to proper html files. Then used the {% include 'template_name.html' %} inside the base template from where the section are removed. 
+  3. The logo path inside each newly created template html pages, replace the path of images using the {% static /path/to/image/ %} template variable. 

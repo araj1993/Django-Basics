@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 {% load static %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,55 +9,15 @@
 </head>
 <body>
     {% comment %} <h1> This is from base template </h1> {% endcomment %}    
-    <header>
-        <center>
-            <img src="{% static 'images/logo.png' %}" alt="LogoImage" style="width:100px; height:100px;">
-        </center>
-    </header> 
-    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">E-Shop</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div>
+        {% include 'header.html' %}
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home<span class="sr-only"></span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Products
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">All Products</a>
-                        <a class="dropdown-item" href="#">Dress Items</a>
-                        <a class="dropdown-item" href="#">Electronics Items</a>
-                        <a class="dropdown-item" href="#">Home And Living</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Cart</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Payments</a>
-                </li>
-            </ul>
-            <form class="d-flex ms-auto" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
-    </nav> 
-    {% block body %} {% endblock %}
+        {% include 'navbar.html' %}
 
-    <div class="footer" style="background-color: #b95580ff;">
-        <p class="text-center">&copy; 2024 E-Shop. All rights reserved.</p>
-    </div>    
+        {% block body %} {% endblock %}
+    </div>
+
+    {% include 'footer.html' %}
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
