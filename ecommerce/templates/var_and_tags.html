@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-
-        <title>Template Variables and Tags</title>
-    </head>
-    <body>
-        <div>
-            <h2 style="color: blue;">Demonstration of Template Variables and Tags in Django </h2>
-            <h2> Name of Product is {{ name }} </h2>
-            <h2> Category of Product is {{ category }} </h2>
+{% extends 'base.html' %}
+{% block title %} Template Variables and Tags {% endblock %}
+{% block body %} 
+    <div>
+        <h2 style="color: blue;">Demonstration of Template Variables and Tags in Django </h2>
+        <h2> Name of Product is {{ name }} </h2>
+        <h2> Category of Product is {{ category }} </h2>
             <h2> Stock of Product is {{ stock }} </h2>
         </div>
         <br>
@@ -29,5 +25,6 @@
                     <li>{{ ele }}</li>
                 {% endfor %}
             </ul>
-    </body>
+        </div>
+{% endblock %}
 </html>
