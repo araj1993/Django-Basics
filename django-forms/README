@@ -1,0 +1,7 @@
+Workflow of this project:
+1. Create a Django project and app.
+2. Create a new file inside the app, called forms.py -> import forms from django 
+3. Define a form class in forms.py
+4. Update the view.py to request to render the form passed as context to regsiter()
+5. Create the template html page and render the {{ form }}
+6. Update the urls.py
