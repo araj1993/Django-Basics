@@ -1,0 +1,7 @@
+{% for type in book_types %}
+    <div>
+        <h2>{{ type.book.title }}</h2>
+        <p>Genre: {{ type.genre }}</p>
+        <p>Language: {{ type.language }}</p>
+    </div>
+{% endfor %}

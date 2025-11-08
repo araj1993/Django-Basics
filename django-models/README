@@ -1,0 +1,42 @@
+# Models
+ - Django models are the blue print of your database.
+ - the models.py file is imported with ** from django.db import models **
+ - each model in the models.py represent a table in DB and attribute are the columns.
+ - django automatically create the ID ie, the PK.
+ - model must be registered in the admin.py to view it from the django admin modal.
+
+### Workflow of this Django project:
+
+ - Created a new proect
+   - django-admin startproject BookStore
+
+ - Created an app called Books
+   - python manage.py startapp Books
+
+ - The floowing settings were done:
+   - settings. py : added 'Books' to the installed app section, template dir path was updated.
+   - urls.py was copied from BookStore to Books.
+   - Created a template folder inside Books app
+
+ - Created 2 models: 
+   - Books : title, author, price
+   - BooksTypes : books (FK), gener, language
+
+ - Make and applied migration:
+   - python manage.py makemigrations
+   - python manage.py migrate
+
+ - Created superuser
+   - python manage.py createsuperuser (login for DB via built-in django admin)
+
+ - Registered the models on admin.py to enable data management via built-in django admin
+   - admin.site.resgister(Books)
+   - admin.site.register(BookTypes)
+
+ - Created template and updated the view.py, urls.py to access models via django.    
+
+##### Notes
+ - Can login to DB via django admin with the superuser and pwd created and add details to each table, which can then be seen on the db inside the project. 
+ - Adding the migration files too for future reference.
+  
+
