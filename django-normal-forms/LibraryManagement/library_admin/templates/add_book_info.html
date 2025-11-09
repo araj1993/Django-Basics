@@ -1,0 +1,14 @@
+{% comment %} {{ form.as_p }} {% endcomment %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Book Info</title>
+    </head>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Add Book</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+Workflow of the project:
+1. Create a project for Library Management, with 2 apps:
+  - Library_admin
+  - Library_user
+
+2. Basice setting of app registering on settings.py, copying urls.py to both app are done
+
+3. Created a forms.py on admin add and added details of a form to collect data from user:
+  - book name, author, published date and price
+
+4. Created the view function for the form created; add_book_info()
+  - since the form is a UI to collect data from user, the request method is POST
+  - if method is POST then get cleaned data from user for title, author, dop and price.
+  - request to render the html page with details, form is passed as context.
+
+5. Created template to render add_book_info form; add_book_info.html
+  - In the html page a <form> tage is created and inside that the {% csrf token %} is provided along with the format in which form is to be displayed : {{ form.as_p }}
+  - Create a button to submit the data. The submitted data can be viewed in the terminal from where we ran the runserver command.
+
+6. Added urls of created view function.
+
+Note**
+The created form submit data and it is not saved anywhere, instead we can display it in the terminal from where we run the runserver command.
+To save these data we need to create a model for the add_book_info view function. (Models create tables on DB for each model class).
+
