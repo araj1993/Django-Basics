@@ -8,3 +8,4 @@ class RegisterForm(forms.Form):
 class StudentForm(forms.Form):
     class_name = forms.CharField(max_length=100, required=False)
     mentor = forms.CharField(max_length=100, required=False)
+    sex = forms.ChoiceField(choices=[('M', 'Male'), ('F', 'Female')], required=False)
