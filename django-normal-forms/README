@@ -19,7 +19,16 @@ Workflow of the project:
 
 6. Added urls of created view function.
 
+
 Note**
 The created form submit data and it is not saved anywhere, instead we can display it in the terminal from where we run the runserver command.
 To save these data we need to create a model for the add_book_info view function. (Models create tables on DB for each model class).
+
+
+Convert normal forms to model forms: 
+1. Create a model in the models.py file: AddBookInfo
+2. Do makemigrations and migrate
+3. Update the view function: instead of printing the values to terminal, now we save the values to the model created by:
+   <model_name>.object.create(col1 = value, col2 = value, ...)
+4. Run the server and enter values and click submit button: data will be saved to DB. 
 
