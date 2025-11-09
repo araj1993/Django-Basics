@@ -32,3 +32,8 @@ Convert normal forms to model forms:
    <model_name>.object.create(col1 = value, col2 = value, ...)
 4. Run the server and enter values and click submit button: data will be saved to DB. 
 
+
+To render the data saved in DB to UI(html page)
+1. Create a fucntion under view.py to render the html page; create the html page under the templates/ folder
+2. html page: loop over the book infor and print each info.
+3. update the urls.py to display the newly created html page. 

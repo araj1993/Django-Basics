@@ -20,5 +20,6 @@ from library_admin import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('add_books/',views.add_book_info, name='add_books')
+    path('add_books/',views.add_book_info, name='add_books'),
+    path('render_book_info/', views.render_book_info, name='render_book_info'),
 ]

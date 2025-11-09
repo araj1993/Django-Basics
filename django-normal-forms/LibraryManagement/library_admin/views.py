@@ -27,3 +27,6 @@ def add_book_info(request):
     return render (request, 'add_book_info.html', {'form':forms})        
 
 
+def render_book_info(request):
+    books_info = AddBookInfo.objects.all()
+    return render(request, 'render_book_info.html', {'books_info':books_info})
